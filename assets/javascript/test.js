@@ -189,7 +189,7 @@ clearInterval(startTrivia());
   
   }
   
-  // This will run the display image function as soon as the page loads.
+ 
   displayImage()
 
 $("#start").click(startTrivia);
@@ -210,62 +210,6 @@ function startTrivia() {
 
 
 
-
-
-
-
-
-
-
-// Q1
-// Which city is the only city in the world situated on two continents?
-// A1
-// Istanbul in Turkey is the city which sits on the Asian and European continent as the city spreads over two sides of a river canal, the Bosporus, which is separates the city in an Asian part and an European part.
-
-// Q2
-// Which is the largest metropolitan city in the world (by population)?
-// A2
-// Tokyo in Japan is the largest city by population. More than 37 million people live in the metropolitan city.
-
-// Q3
-// Which country in Europe has the biggest number of  inhabitants?
-// A3
-// Germany has the biggest population in Europe. More than 82 million people live in this country in central Europe.
-
-// Q4
-// What is the largest country in the world?
-// A4
-// Russia is the largest country with 6,602 million square miles. Then comes Canada, with 3,855 million square miles and then the United States with 3,797 million square miles. China has 3,705 million square miles.
-
-// Q5
-// Which countries share the longest border in the world?
-// A5
-// The border between the United States of America and Canada is the longest. It is over 8,800 km/5,500 miles long (including Alaska) and 8 Canadian provinces and territories and 13 US states are located along this border.
-
-// Q6
-// Which desert is the biggest desert in the world, outside the Polar region?
-// A6
-// The Sahara Desert is the biggest desert in the world and stretches over an area which is almost as big as the United States. It still grows every year!
-
-// Q7
-// Chichen Itza is located in which country?
-// A7 
-// Chichén Itzá is a complex of Mayan ruins on Mexico's Yucatán Peninsula. A massive step pyramid, known as El Castillo or Temple of Kukulcan, dominates the ancient city, which thrived from around 600 A.D. to the 1200s.
-
-// Q8
-// Petra is located in which country?
-// A8 
-// Petra is a famous archaeological site in Jordan's southwestern desert. Dating to around 300 B.C., it was the capital of the Nabatean Kingdom. 
-
-// Q9
-// which country is called playground of europe?
-// A9 
-// Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. It's known for its ski resorts and hiking trails.
-
-// Q10
-// In which country white elephant is found?
-// A10 
-// White elephants also called as Albino Elephants are in Thailand, they are a rare kind of elephant. Also found in Burma, Thailand, Laos and Cambodia.
 
 
 
