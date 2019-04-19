@@ -10,24 +10,18 @@ body {
 
 #question {
     padding: 10px;
-    font: 50px italic Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #timer {
-    border: 2px solid black;
     color:red;
     padding: 25px;
-    font: 50px bold -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
 .container {
-    size: 700px 700px;
     text-align: center;
     padding: 2%;
     margin-top: 2%;
     background-color: rgb(194, 194, 194);
-
 }
 
 button {
@@ -45,14 +39,47 @@ button:hover {
 button:focus {
     background-color:white;
     color: black;
-
 }
 
 .col-5{
     margin-left: 50px;
     padding: 25px;
     color:white;
-    font: 50px bold Verdana, Geneva, Tahoma, sans-serif;
+}
 
+#alertDiv {
+    padding: 1%;
+    border: 4px solid #000;
+    border-radius: 12px;
+    position: fixed;
+    top: 45vh;
+    left: 35%;
+    background: white;
+    height: 10%;
+    width: 30%;
+    text-align: center;
+    display: none;
+    line-height: 2;
+    z-index: 1;
+}
+
+#scoreDiv {
+    padding: 5%;
+    border: 4px solid #000;
+    border-radius: 12px;
+    position: fixed;
+    top: 45vh;
+    left: 25%;
+    background: white;
+    height: 25%;
+    width: 50%;
+    text-align: center;
+    display: none;
+    line-height: 2;
+    z-index: 1;
+}
+
+.row {
+    display: none;
 }
 
