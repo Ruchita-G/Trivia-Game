@@ -19,7 +19,7 @@ var questionsList = [
         q: "Which country in Europe has the biggest number of  inhabitants?",
         a: "France",
         b: "Spain",
-        c: "poland",
+        c: "Poland",
         d: "Germany",
         value: "4"
     },
@@ -64,7 +64,7 @@ var questionsList = [
         value: 4
     },
     {
-        q: "which country is called playground of europe?",
+        q: "Which country is called playground of europe?",
         a: "Belgium",
         b: "Switzerland",
         c: "Austria",
@@ -133,11 +133,11 @@ var correctAns = 0;
 
 // =====================================================
 
-$(document).on("click", ".ansBtn", function () {
+$(".ansBtn").click(answer);
+function answer() {
 
     $("#alertDiv").hide();
     $("#scoreDiv").hide();
-
 
     if (i < questionsList.length) {
 
@@ -149,19 +149,18 @@ $(document).on("click", ".ansBtn", function () {
         if ($(this).val() == questionsList[i].value) {
             correctAns++;
 
-            $("#alertDiv").html("<h1 'color: blue'>Correct Answer!!!</h1>");
+            $("#alertDiv").html("<h1 style='color:green'>Correct Answer!!!</h1>");
             $("#alertDiv").show(500);
             $(".row").hide();
         }
         else {
-            $("#alertDiv").html("<h1 'color: red'>That's Incorrect!!!</h1>");
+            $("#alertDiv").html("<h1 style='color:red'>That's Incorrect!!!</h1>");
             $("#alertDiv").show(500);
             $(".row").hide();
         };
     };
     nextInfo();
-
-})
+}
 // =====================================================
 
 function count() {
@@ -170,7 +169,7 @@ function count() {
     $("#timer").html(`<h1>${timer} seconds left!</h1>`);
 
     if (!timer) {
-        $("#alertDiv").html("<h1 'color:', orange>Time's UP!!!</h1>");
+        $("#alertDiv").html("<h1 style='color:orange'>Time's UP!!!</h1>");
         $("#alertDiv").show(500);
         $(".row").hide();
         $(".card").show();
@@ -180,15 +179,16 @@ function count() {
 
 // =====================================================
 
-$("#start").on("click", function start() {
-    
+$("#start").click(start);
+function start() {
+
     $("#alertDiv").hide();
     $("#scoreDiv").hide();
     $("#start").hide();
     $(".row").show();
     intervalId = setInterval(count, 1000);
     nextQuestion();
-});
+};
 
 function nextQuestion() {
     $(".row").show();
@@ -200,12 +200,7 @@ function nextQuestion() {
 
     if (i === questionsList.length) {
 
-        $(".row").hide();
-        $("#timer").hide();
-        $("#scoreDiv").html(`<h1>You got ${correctAns}/10 Correct Answers<br>Thanks for Playing</h1>`);
-        $("#scoreDiv").show(500);
-        $("#start").show();
-        $(".card").hide();
+        end();
 
     } else {
 
@@ -217,10 +212,8 @@ function nextQuestion() {
         $("#c").html(`<h1>${questionsList[i].c}</h1>`);
         $("#d").html(`<h1>${questionsList[i].d}</h1>`);
     }
-
-
-
 }
+
 function nextInfo() {
 
     j++;
@@ -232,9 +225,18 @@ function nextInfo() {
         $("#pic").html("<img src=" + moreInfo[j].pic + " width='900px' height='600px'>");
         $("#info").html("<h2>" + moreInfo[j].info + "</h2>");
     }
-
     setTimeout(nextQuestion, 3000);
-
-
 }
 
+function end() {
+    clearInterval(intervalId);
+    $("#scoreDiv").html(`<h1 style='color:blue'>You got ${correctAns}/10 Correct Answers<br>Thanks for Playing!</h1>`);
+    $("#scoreDiv").show(500);
+    $("#start").show();
+    $(".card").hide();
+    $(".row").hide();
+    i = -1;
+    j = -1;
+    correctAns = 0;
+
+}
